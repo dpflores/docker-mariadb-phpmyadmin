@@ -1,0 +1,1 @@
+Crear el archivo `config/env` donde van las variables de entorno
