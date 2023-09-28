@@ -25,7 +25,9 @@ services:
             PUID: 1000
             PGID: 1000
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: acme_db
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
             TZ: America/Lima
             
             # MYSQL_USER: acme
