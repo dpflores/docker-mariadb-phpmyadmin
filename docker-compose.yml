@@ -23,10 +23,10 @@ services:
         environment:
             PUID: 1000
             PGID: 1000
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_USER: ${MYSQL_USER}
-            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: AIvDtQlbMxYD5dC
+            MYSQL_DATABASE: acme_db
+            MYSQL_USER: acme
+            MYSQL_PASSWORD: 121383Loco!
             TZ: America/Lima
          
             
