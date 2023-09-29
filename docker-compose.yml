@@ -5,8 +5,8 @@ services:
         image: dpflores/acme_nodered:base
         environment:
             TZ: America/Lima
-        volumes:
-            - nodered-data:/data
+        # volumes:
+        #     - ./nodered-data:/data
         privileged: true
         restart: "always"
         network_mode: "host"
@@ -30,5 +30,3 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             TZ: America/Lima
 
-volumes:
-  node-red-data:
