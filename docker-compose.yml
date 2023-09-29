@@ -6,7 +6,7 @@ services:
         environment:
             TZ: America/Lima
         volumes:
-            - "./nodered-data:/data"
+            - nodered-data:/data
         privileged: true
         restart: "always"
         network_mode: "host"
@@ -29,3 +29,6 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             TZ: America/Lima
+
+volumes:
+  node-red-data:
