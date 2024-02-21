@@ -1,17 +1,5 @@
 version: '3.7'
-services:
-    # nodered:
-    #     container_name: nodered
-    #     image: dpflores/acme_nodered:base
-    #     environment:
-    #         TZ: America/Lima
-    #     # volumes:
-    #     #     - ./nodered-data:/data
-    #     privileged: true
-    #     restart: "always"
-    #     network_mode: "host"
-         
-            
+services:        
     db:
         image: linuxserver/mariadb:10.6.13
         container_name: mariadb
