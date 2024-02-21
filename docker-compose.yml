@@ -4,7 +4,7 @@ services:
         image: linuxserver/mariadb:10.6.13
         container_name: mariadb
         volumes:
-        - ${MARIADB_VOLUME_PATH}/mariadb-data:/config
+        - ./mariadb-data:/config
         privileged: true
         restart: always
         ports:
