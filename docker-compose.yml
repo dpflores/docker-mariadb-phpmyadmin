@@ -29,4 +29,13 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             TZ: America/Lima
+            
+    phpmyadmin:
+        image: phpmyadmin
+        restart: always
+        ports:
+          - 8080:80
+        environment:
+          PMA_ARBITRARY: 1
+          UPLOAD_LIMIT: 500M
 
