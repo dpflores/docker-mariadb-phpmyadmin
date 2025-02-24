@@ -1,0 +1,29 @@
+services:
+  db:
+    image: linuxserver/mariadb:11.7
+    volumes:
+      - ./mariadb-data:/config
+    privileged: true
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      PUID: 1000
+      PGID: 1000
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      TZ: America/Lima
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_ARBITRARY: 0
+      PMA_HOST: db
+      UPLOAD_LIMIT: 500M
+    depends_on:
+      - db
