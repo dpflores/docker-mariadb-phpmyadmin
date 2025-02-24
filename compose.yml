@@ -1,6 +1,6 @@
 services:
   db:
-    image: linuxserver/mariadb:11.7
+    image: linuxserver/mariadb:10.6.13
     volumes:
       - ./mariadb-data:/config
     privileged: true
